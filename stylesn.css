@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu{
+
+    background-color: #1A202C;
+    color: #fff;
+    height:70px;
+
+}
+.menu__container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu .avatar{
+
+    width: 90px;
+    height: 70px;
+   /* border-radius: 60%;*/
+   
+   
+ /*  left: calc(50% - 50px)*/
+}
+
+
+.menu__links{
+
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+
+.menu__item{
+
+    list-style: none;
+    position: relative;
+    height: 100%;
+   /* --clip:polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
+    --clip:polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90);
+}
+.menu__item:hover{
+--clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+--transform: rotate(0);
+
+}
+.menu__link{
+
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30 px;
+    display: flex;
+    height:100%;
+    align-items: center;
+
+}
+.menu__link:hover{
+    background-color: #5e7094;
+}
+
+
+.menu-arrow{
+
+    transform: var(--transform);
+    transition:transform .3s;
+    display: block;
+    margin-left: 3px;
+
+}
+.menu__nesting{
+    list-style:none;
+    transition:clip-path .3s;
+    clip-path: var(--clip);
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:max-content;
+    transform: translateY(100%);
+    background-color: #011227;
+}
+.menu__link--inside{
+    padding: 30px 100px 30px 20px;
+}
+.menu__link--inside:hover{
+    background-color: #798499;
+
+}
+
+.menu__noticias{
+    height:100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+
+}
+
+.menu__img{
+    display: block;
+    width: 60px;
+}
+
+/*@media(max-width:800px){
+    .menu__noticias{
+
+        display:flex;
+    }
+    .menu__links{
+
+        position:fixed;
+        max-width:400px;
+        width:100%;
+        top:70px;
+        bottom:0;
+        right:0;
+
+    }
+}*/
