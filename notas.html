@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARONTE</title>
+    <link rel="icon" href="images/para-icono.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesn.css">
+    <script type="module" src="/notas.js"></script>
+        <!-- BOOTSWATCH -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/solar/bootstrap.min.css" integrity="sha384-NCwXci5f5ZqlDw+m7FwZSAwboa0svoPPylIW3Nf+GBDsyVum+yArYnaFLE9UDzLd" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <script src="app.js" type="module"></script>
+  <hr />
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <nav class="nav-main">
+      <img
+        src="img/patrones2.jpg"
+        alt="Caronte Logo"
+        class="nav-caronte"
+      />
+      <ul class="nav-menu show">
+        <li class="nav-elements">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="nav-elements">
+          <a href="login.html">Login</a>
+        </li>
+        <li class="nav-elements">
+          <a href="#" class="menu__link">
+            Categorias<img src="assets/arrow.svg" class="menu__arrow"
+          /></a>
+          <ul class="menu__nesting">
+            <li class="menu__inside">
+              <a href="home.html" class="menu__link menu__link--inside">Tecnologia</a>
+            </li>
+
+            <li class="menu__inside">
+              <a href="#" class="menu__link menu__link--inside"
+                >Videojuegos</a
+              >
+            </li>
+
+            <li class="menu__inside">
+              <a href="#" class="menu__link menu__link--inside">Ciencia</a>
+            </li>
+
+            <li class="menu__inside">
+              <a href="#" class="menu__link menu__link--inside">Musica</a>
+            </li>
+            <li class="menu__inside">
+              <a href="#" class="menu__link menu__link--inside">Arte</a>
+            </li>
+            <li class="menu__inside">
+              <a href="#" class="menu__link menu__link--inside">Cultura</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-elements">
+          <a href="contacto.html">Contacto</a>
+        </li>
+      </ul>
+      <ul class="nav-menu-right">
+        <li>
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+ 
+  <!-- ADD TASK -->
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="h4">Agrega una nota</h1>
+          <form id="task-form">
+            <div class="form-group">
+              <input type="text" id="task-title" class="form-control" class="Task Title" placeholder="Título de la nota"
+                autofocus>
+            </div>
+            <div class="form-group">
+              <textarea id="task-description" rows="5" class="form-control" placeholder="Descripción de la nota"></textarea>
+            </div>
+
+            <button class="btn btn-primary" id="btn-task-form">
+              Guardar
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Tasks List -->
+    <div class="col-md-6" id="tasks-container"></div>
+  </div>
+</div>
+
+<!-- FIREBASE -->
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+ 
+
+<!--CUSTOM CODE-->
+<script type="module" src="js/notas.js"></script>
+<script type="module" src="js/firestoren.js"></script>    
+  
+    
+</body>
+</html>
